@@ -1,19 +1,114 @@
 <!HTML>
 <head>
-  <!-- css CDNs -->
-  <link href="//cdn.jsdelivr.net/bootstrap.material-design/0.3.0/css/material-fullpalette.css" rel="stylesheet">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   
+  <!-- jquery CDN -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- css CDNs -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"><!--bootstrap-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css" rel="stylesheet"><!--material design-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css.map" rel="stylesheet"><!--material design-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.min.css" rel="stylesheet"><!--material design-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.min.css.map" rel="stylesheet"><!--material design-->
+
   <!-- JS CDNs -->
-  <script src=""></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script><!--bootstrap-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script><!--material design-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script><!--material design-->
+  <script src="animations.js"></script>
   <title>thingsido</title>
-  <b>thingsido</b>
+
+
+  <!-- navbar -->
+  <nav class="navbar navbar-material-blue-grey-600">
+    <div class="container-fluid">
+      <div class="navbar-header">
+	<a class="navbar-brand" href="">
+          <b>thingsido</b>
+	</a>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar ends -->
+
+  
 </head>
 
 
 
-<body>
+<body class="text-center">
 
-</body>
+  <div class="col-md-2"></div>
+  <div class="col-md-8 well text-center">
+    
+    <ul class="breadcrumb breadcrumb text-center">
+      <li class="active"><a href="javascript:void(0)">Latest</a></li>
+      <li><a href="javascript:void(0)">Machine Learning</a></li>
+      <li ><a href="javascript:void(0)">Home Automation</a></li>
+      <li ><a href="javascript:void(0)">Healthcare Tech</a></li>
+      <li ><a href="javascript:void(0)">Cycling</a></li>
+      <li ><a href="javascript:void(0)">Fitness</a></li>
+      
+    </ul>
+    
+    <!-- button to add a new post-->
+    <button class="btn btn-inverse btn-sm btn-raised " id="addPost" onclick="showInput()">+ New Post</button>
+    <br/>
+    
+  </div>
+  
+  <div class="col-md-2"></div>
+  <br/>
+  <!--close the well  -->
 
   
+  <!-- Text input area for the new post -->
+  <div class="col-md-3"></div>
+  <div class="col-md-6" id="input" hidden>
+    <div class="form-group well text-center">
+      <input class="form-control" id="Heading" placeholder="Heading"></input>
+      <br/>
+      
+      
+      <textarea class="form-control" rows="10" id="textArea" placeholder="Content"></textarea>
+      <br/>
+      
+      <select class="form-control" id="select">
+	<option>Machine Learning</option>
+	<option>Home Automation</option>
+	<option>Healthcare Tech</option>
+	<option>Cycling</option>
+	<option>Fitness</option>
+      </select>
+      <br/>
+      
+      <button class="btn btn-danger btn-sm btn-raised" onClick="cancelNewPost()">Cancel</button>
+      <button class="btn btn-inverse btn-sm btn-raised">Submit</button>
+      <br/>
+      
+      
+    </div>
+    
+  </div>
+  <div class="col-md-3"></div>
+  
+    
+  
+</body>
+
+
+
+
 </html>
+
+
+
+
+
+
+
